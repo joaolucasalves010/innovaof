@@ -13,7 +13,7 @@ import ContactSection from "../components/ContactSection"
 import LoadingComponent from "@/components/LoadingComponent"
 import { CarouselFeedbacks } from "@/components/CarouselFeedbacks"
 
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { LoadingContext } from "@/context/LoadingContext"
 
 export function Home() {
