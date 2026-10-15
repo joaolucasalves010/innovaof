@@ -13,18 +13,20 @@ import ContactSection from "../components/ContactSection"
 import LoadingComponent from "@/components/LoadingComponent"
 import { CarouselFeedbacks } from "@/components/CarouselFeedbacks"
 
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { LoadingContext } from "@/context/LoadingContext"
 
 export function Home() {
-  const { loaded } = useContext(LoadingContext)!
+
+  const {loaded} = useContext(LoadingContext)!
+
   return (
     <>
       {!loaded && <LoadingComponent />}
 
       <div
-        className={`min-h-screen bg-black text-white ${
-          !loaded ? "invisible" : ""
+        className={`${
+          !loaded ? "invisible h-dvh overflow-hidden" : "min-h-screen bg-black text-white"
         }`}
       >
         <Header />
